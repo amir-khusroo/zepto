@@ -1,12 +1,10 @@
 package com.zepto.db.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -17,5 +15,12 @@ public class AppOrder {
     UUID id;
     LocalDateTime placedTime;
     int totalAmount;
+
+    @ManyToOne
+    AppUser customer;
+    @ManyToOne
+    AppUser delhiveryPartner;
+    @OneToMany
+    List<Product> products;
 
 }

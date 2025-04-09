@@ -16,5 +16,7 @@ public class WareHouse {
     @Column(unique = true, nullable = false)
     String email;
     String pincode;
+    @OneToOne
+    AppUser manager;
 
 }

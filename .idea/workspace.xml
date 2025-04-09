@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d5838c1-c9ce-490f-b432-a0a8ca303b7c" name="Changes" comment="">
+    <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="add model class in db">
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/enums/UserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RegisterUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/AppOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/AppOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/WareHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/WareHouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +44,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2vTgP7LUs6dpVOhj8HVYAtTlQ0q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,6 +88,10 @@
       <updated>1744174453365</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add model class in db" />
+    <option name="LAST_COMMIT_MESSAGE" value="add model class in db" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
