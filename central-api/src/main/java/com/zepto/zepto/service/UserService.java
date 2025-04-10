@@ -3,21 +3,21 @@ package com.zepto.zepto.service;
 import com.zepto.zepto.models.AppUser;
 import com.zepto.zepto.requestDTO.RegisterUserDTO;
 import com.zepto.zepto.utils.Adapter;
-import com.zepto.zepto.utils.DatabaseAPI;
+import com.zepto.zepto.utils.DatabaseAPIUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
     @Autowired
-    DatabaseAPI databaseAPI;
+    DatabaseAPIUtil databaseAPIUtil;
     @Autowired
     Adapter adapter;
 
     public AppUser createUser(RegisterUserDTO user){
         AppUser appUser=adapter.mapUserRequestBodyToAppUser(user);
 
-        AppUser response=databaseAPI.callCreateUserEndpoints(appUser);
+        AppUser response= databaseAPIUtil.callCreateUserEndpoints(appUser);
         return response;
     }
 }

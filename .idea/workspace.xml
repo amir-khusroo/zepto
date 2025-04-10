@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="create layer in central api for registration">
-      <change afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/AppUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RegisterProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/AppOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/model/AppOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,26 +23,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "amir-khusroo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/amir-khusroo/zepto.git&quot;,
+    &quot;accountId&quot;: &quot;c9b3606f-440e-465f-b468-1305190e9725&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/amir-khusroo/zepto.git",
-    "accountId": "c9b3606f-440e-465f-b468-1305190e9725"
-  }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,9 +50,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2vTgP7LUs6dpVOhj8HVYAtTlQ0q" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -63,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DbApplication.executor": "Run",
-    "Application.ZeptoApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Spring/zepto",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "settings.editor.splitter.proportion": "0.27522936"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DbApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ZeptoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Spring/zepto&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.27522936&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ZeptoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zepto.zepto.ZeptoApplication" />
@@ -115,6 +113,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model class in db" />
