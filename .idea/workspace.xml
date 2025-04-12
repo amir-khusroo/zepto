@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="create layer in central api for registration">
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RegisterProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/ProductService.java" afterDir="false" />
+    <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="aading add product feature in central-api">
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/configuration/ApplicationConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/ApiUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/ApiUtilImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/AppUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/AppUserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744185645851</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aading add product feature in central-api">
+      <option name="closed" value="true" />
+      <created>1744266183004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744266183004</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,7 +140,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model class in db" />
     <MESSAGE value="create layer in central api for registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="create layer in central api for registration" />
+    <MESSAGE value="aading add product feature in central-api" />
+    <option name="LAST_COMMIT_MESSAGE" value="aading add product feature in central-api" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
