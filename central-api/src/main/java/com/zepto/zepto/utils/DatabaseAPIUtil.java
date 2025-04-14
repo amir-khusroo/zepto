@@ -2,6 +2,8 @@ package com.zepto.zepto.utils;
 
 import com.zepto.zepto.models.AppUser;
 import com.zepto.zepto.models.Product;
+import com.zepto.zepto.models.WareHouse;
+import com.zepto.zepto.models.WareHouseProduct;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,10 +15,11 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.HashMap;
+import java.util.UUID;
 
 @Component
 public class DatabaseAPIUtil extends ApiUtilImpl{
-    @Value("${db.api.url")
+    @Value("${db.api.url}")
     String dbApiUrl;
 
     @Autowired
@@ -37,5 +40,23 @@ public class DatabaseAPIUtil extends ApiUtilImpl{
     public Product callCreateProductEndPoint(Product product) {
         Object resp = makePostCall(dbApiUrl, "/product/save", new HashMap<>(), product);
         return mapper.map(resp, Product.class);
+    }
+
+    public  AppUser getUserByUserId(UUID userId){
+        String endPoint="/user/"+userId.toString();
+        Object resp=makeGetCall(dbApiUrl,endPoint,new HashMap<>());
+        return  mapper.map(resp,AppUser.class);
+    }
+
+    public WareHouse createWareHouse(WareHouse wareHouse){
+        String endPoint="/warehose/save";
+        Object resp=makePostCall(dbApiUrl,endPoint,new HashMap<>(),wareHouse);
+        return  mapper.map(resp,WareHouse.class);
+    }
+
+    public WareHouseProduct createWareHouseProduct(WareHouseProduct wareHouseProduct){
+        String endPoint="warehouse/product/save";
+        Object resp=makePostCall(dbApiUrl,endPoint,new HashMap<>(),wareHouseProduct);
+        return mapper.map(resp, WareHouseProduct.class);
     }
 }
