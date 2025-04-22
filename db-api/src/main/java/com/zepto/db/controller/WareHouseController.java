@@ -5,6 +5,7 @@ import com.zepto.db.repository.WareHouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -32,4 +33,10 @@ public class WareHouseController {
         wareHouseRepository.save(wareHouse);
         return wareHouse;
     }
+
+    @GetMapping("/pincode/{pincode}")
+    public WareHouse getWareHouseByPincode(@PathVariable String pincode){
+        return wareHouseRepository.findByPincode(pincode);
+    }
+
 }

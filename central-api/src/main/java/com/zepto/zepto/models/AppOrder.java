@@ -1,28 +1,23 @@
-package com.zepto.db.model;
+package com.zepto.zepto.models;
 
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class AppOrder {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     LocalDateTime placedTime;
-    double totalAmount;
-
-    @ManyToOne
     AppUser customer;
-    @ManyToOne
-    AppUser delhiveryPartner;
-    @OneToMany
+    AppUser deliveryPartner;
+    double totalamount;
     List<Product> products;
-
 }
