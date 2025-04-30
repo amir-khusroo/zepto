@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -43,8 +44,13 @@ public class AppUserController {
         return user;
     }
 
-    @DeleteMapping
+    @DeleteMapping("delete/{userId}")
     public void deleteUser(@PathVariable UUID userId){
         appUserRepository.deleteById(userId);
+    }
+
+    @GetMapping("/delivery-partner/{pincode}")
+    public List<AppUser> getDelhiveryPartnerByPincode(@PathVariable String pincode){
+        return appUserRepository.getDeliveryPartnerByPincode(pincode);
     }
 }

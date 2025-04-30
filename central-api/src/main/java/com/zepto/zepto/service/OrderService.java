@@ -1,10 +1,12 @@
 package com.zepto.zepto.service;
 
 import com.zepto.zepto.models.*;
+import com.zepto.zepto.requestDTO.RequestOrderDTO;
 import com.zepto.zepto.requestDTO.RequestOrderProductDTO;
 import com.zepto.zepto.responsedto.ResponseBillDTO;
 import com.zepto.zepto.responsedto.ResponseBillProductDTO;
 import com.zepto.zepto.utils.DatabaseAPIUtil;
+import com.zepto.zepto.utils.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,9 @@ public class OrderService {
 
     @Autowired
     WareHouseService wareHouseService;
+
+    @Autowired
+    MailUtil mailUtil;
 
     public ResponseBillDTO placeOrder(List<RequestOrderProductDTO> products, UUID userId){
         AppUser user=databaseAPIUtil.getUserByUserId(userId);
@@ -70,11 +75,31 @@ public class OrderService {
         bill.setOrderPlacedTime(LocalDateTime.now());
         bill.setTotalBillPayed(totalAmount);
         bill.setProducts(billProducts);
+
+        notifyDeliveryPartner(wareHouse.getPincode(),user,bill);
+
         return bill;
 
     }
 
-    private double getPriceAfterDiscount(int productPrice, int discount) {
-        return 0.1;
+    public double getPriceAfterDiscount(int amount, int discount)
+    {
+        double offAmount=amount*((double) discount /100);
+        return amount-offAmount;
+    }
+
+    public List<AppUser> getDelhiveryPartnerByPincode(String pincode){
+        return databaseAPIUtil.getDelhiveryPartnerByPincode(pincode);
+    }
+
+    public void notifyDeliveryPartner(String pincode, AppUser customer, ResponseBillDTO bill){
+        List<AppUser> dp=getDelhiveryPartnerByPincode(pincode);
+        for(AppUser partner:dp){
+            RequestOrderDTO order=new RequestOrderDTO();
+            order.setCustomer(customer);
+            order.setDelhiveryPartner(partner);
+            order.setBill(bill);
+            mailUtil.sendOrderNotification(order);
+        }
     }
 }

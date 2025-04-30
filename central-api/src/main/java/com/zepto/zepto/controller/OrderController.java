@@ -4,6 +4,8 @@ import com.zepto.zepto.requestDTO.RequestOrderProductDTO;
 import com.zepto.zepto.responsedto.ResponseBillDTO;
 import com.zepto.zepto.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +18,13 @@ public class OrderController {
     OrderService orderService;
 
     @PostMapping("/place")
-    public ResponseBillDTO placeOrder(@RequestBody List<RequestOrderProductDTO> products, @RequestParam UUID userId){
-        return orderService.placeOrder(products,userId);
+    public ResponseEntity placeOrder(@RequestBody List<RequestOrderProductDTO> products, @RequestParam UUID userId){
+        try {
+            ResponseBillDTO bill=orderService.placeOrder(products,userId);
+            return  new ResponseEntity<>(bill, HttpStatus.CREATED);
+        }
+        catch (RuntimeException e){
+            return new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
+        }
     }
 }

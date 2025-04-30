@@ -30,7 +30,7 @@ public class Adapter {
         Product product=Product.builder()
                 .productName(productDTO.getProductName())
                 .productPrice(productDTO.getProductPrice())
-                .details((productDTO.getDetail()))
+                .details((productDTO.getDetails()))
                 .weight(productDTO.getWeight())
                 .rating(0.0)
                 .manufacturerEmail(productDTO.getManufacturerEmail())

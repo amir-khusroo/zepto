@@ -49,7 +49,7 @@ public class DatabaseAPIUtil extends ApiUtilImpl{
     }
 
     public WareHouse createWareHouse(WareHouse wareHouse){
-        String endPoint="/warehose/save";
+        String endPoint="/warehouse/save";
         Object resp=makePostCall(dbApiUrl,endPoint,new HashMap<>(),wareHouse);
         return  mapper.map(resp,WareHouse.class);
     }
@@ -92,5 +92,12 @@ public class DatabaseAPIUtil extends ApiUtilImpl{
         String endpoint="/order/save";
         Object resp=makePostCall(dbApiUrl,endpoint,new HashMap<>(),order);
         return mapper.map(resp,AppOrder.class);
+    }
+
+    public List<AppUser> getDelhiveryPartnerByPincode(String pincode){
+        String endPoint="/user/delivery-partner/"+pincode;
+        Object resp=makeGetCall(dbApiUrl,endPoint,new HashMap<>());
+        Type listType=new TypeToken<List<AppUser>>(){}.getType();
+        return mapper.map(resp,listType);
     }
 }
