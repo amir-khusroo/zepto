@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="adding place order function">
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RequestOrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/MailUtil.java" afterDir="false" />
+    <list default="true" id="785d998d-902b-4dc5-91c4-ea4eb08b6e6c" name="Changes" comment="get delivery partner and notify them">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/WareHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/models/WareHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RegisterProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/requestDTO/RegisterProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/java/com/zepto/zepto/utils/DatabaseAPIUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/central-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/java/com/zepto/db/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db-api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,33 +57,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DbApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ZeptoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Spring/zepto&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.27522936&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DbApplication.executor": "Run",
+    "Application.MailApplication.executor": "Run",
+    "Application.ZeptoApplication.executor": "Run",
+    "Application.com.zepto.mail.MailApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Spring/zepto/mail-api",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.scopes",
+    "settings.editor.splitter.proportion": "0.27522936"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zepto.zepto.responsedto" />
       <recent name="com.zepto.zepto.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ZeptoApplication">
+  <component name="RunManager" selected="Application.MailApplication">
     <configuration name="DbApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zepto.db.DbApplication" />
       <module name="db" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zepto.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zepto.mail.MailApplication" />
+      <module name="mail" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zepto.mail.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,8 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ZeptoApplication" />
+        <item itemvalue="Application.MailApplication" />
         <item itemvalue="Application.DbApplication" />
+        <item itemvalue="Application.ZeptoApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745352777800</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="get delivery partner and notify them">
+      <option name="closed" value="true" />
+      <created>1746015397493</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746015397493</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +216,8 @@
     <MESSAGE value="add warehouse in central api" />
     <MESSAGE value="add product and warehouse in db" />
     <MESSAGE value="adding place order function" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding place order function" />
+    <MESSAGE value="get delivery partner and notify them" />
+    <option name="LAST_COMMIT_MESSAGE" value="get delivery partner and notify them" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
